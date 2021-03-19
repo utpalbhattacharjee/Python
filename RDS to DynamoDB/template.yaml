@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  RDSSQLquery:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      FunctionName: RDS_SQL_query
+      Description: ''
+      Handler: lambda_function.lambda_handler
+      MemorySize: 128
+      Role: 'arn:aws:iam::757712384777:role/LambdaAdminRole'
+      Runtime: python3.8
+      Timeout: 12
