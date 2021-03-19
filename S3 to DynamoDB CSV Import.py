@@ -1,9 +1,7 @@
 import boto3
 s3_client = boto3.client("s3")
 dynamodb = boto3.resource("dynamodb")
-
 table = dynamodb.Table("whizlabs_students_table")
-
 def lambda_handler(event, context):
     bucket_name = event['Records'][0]['s3']['bucket']['name']
     s3_file_name = event['Records'][0]['s3']['object']['key']
